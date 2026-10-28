@@ -43,8 +43,42 @@
         <input type="date" id="datum" name="datum" required>
       </div>
       <!-- TODO 2: rullista för antal personer, textarea för önskemål -->
+      <select name="antal-personer" id="antal-personer" required>
+        <option value="">Välj antal personer</option>
+        <option value="1">1 person</option>
+        <option value="2">2 personer</option>
+        <option value="3">3 personer</option>
+        <option value="4">4 personer</option>
+        <option value="5">5 eller fler personer</option>
+      </select>
       <!-- TODO 3: fieldset + legend för kostönskemål och bekräftelsesätt -->
-      <!-- TODO 4: samtyckeskryssruta (required) och skickaknapp -->
+      <fieldset>
+        <legend>Kostönskemål</legend>
+        <div class="falt">
+          <input type="checkbox" id="vegetarisk" name="vegetarisk" value="vegetarisk">
+          <label for="vegetarisk">Vegetarisk</label>
+        </div>
+        <div class="falt">
+          <input type="checkbox" id="vegansk" name="vegansk" value="vegansk">
+          <label for="vegansk">Vegansk</label>
+        </div>
+        <div class="falt">
+          <input type="checkbox" id="glutenfri" name="gluten" value="glutenfri">
+          <label for="glutenfri">Glutenfri</label>
+        </div>
+      </fieldset>
+      <textarea name="onskemal" id="onskemal" rows="4" placeholder="Skriv eventuella önskemål här..."></textarea>
+      <fieldset>
+        <legend>Hur vill du få bekräftelsen? *</legend>
+        <div class="falt">
+          <input type="radio" id="bekraftelse-epost" name="bekraftelse" value="epost" required>
+          <label for="bekraftelse-epost">Bekräftelse via e-post</label>
+        </div>
+        <div class="falt">
+          <input type="radio" id="bekraftelse-sms" name="bekraftelse" value="sms">
+          <label for="bekraftelse-sms">Bekräftelse via SMS</label>
+        </div>
+        <!-- TODO 4: samtyckeskryssruta (required) och skickaknapp -->
     </form>
   </main>
 
